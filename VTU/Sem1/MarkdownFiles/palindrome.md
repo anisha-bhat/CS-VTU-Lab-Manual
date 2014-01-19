@@ -1,5 +1,4 @@
 ## Aim: To check given input is a palindrome or not, comment with suitable message.
-### Using TCP/IP sockets, write a client-server program to make client sending the file name and the server to send back the contents of the requested file if present.
 
 ## Theory
 > what is a palindrome?

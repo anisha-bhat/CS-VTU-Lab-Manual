@@ -55,6 +55,16 @@ ex. MALAYALAM, 10101.
 
 }
 ## Output:
+ 
+ 1. enter a number
+    1001
+   
+   
+   given is a palindrome.
+
+ 2.enter  a number
+  1234
+    given not palindrome
 *Commands for execution:-*
 
 * Open terminal for compilation .

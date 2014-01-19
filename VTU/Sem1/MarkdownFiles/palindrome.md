@@ -5,8 +5,10 @@
     any word/number read same both ends , is said to be a palindrome.
 ex. MALAYALAM, 10101.
 
+ the main 
+
   
-## Algorithm: Client Side
+## Algorithm:
 1. Start.
 2. take input, initialise respectively.
 3. assign given input to a variable, reverse and assign to another variable .
@@ -17,7 +19,7 @@ ex. MALAYALAM, 10101.
 5. Stop.
 
 
-## Code: client.c
+## Code: 
    
     #include<stdio.h> 
     #include<stdlib.h>

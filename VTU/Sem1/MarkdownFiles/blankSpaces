@@ -1,0 +1,88 @@
+## Aim: given input having more than one spaces between cosecutive words, remove them replace it with one blank space each.
+
+## Theory
+>  here given a statemen with more then one spaces , this is a wastage of memory.the given string  is scaned, wenever second cosecutive blank space delte it till left with single blank space. in the program part, we see 3 major parts like: input string  type with more blank spaces, a function to delte further extra blank spaces, display the new string having single blank spaces only.
+  
+## Algorithm: 
+1. Start.
+2. take input string with many spaces between, initialise respectively.
+3. assign given to variable, increment it,if again its a blank space skip it by incrementing till encounter next letter/non-blank space.this gives a new string.display it
+4. Stop
+
+
+## Code: client.c
+   
+    #include<stdio.h> 
+    #include<stdlib.h>
+
+ int main(void)
+{
+        char acSStr[100],acDStr1[100],acDStr2[100];
+        int i=0,j=0,iSpcount=0;
+        char cCurChar;
+
+        printf("\n*************************************************************************");
+        printf("\n*\tPROGRAM TO REPLACE MULTIPLE WHITESPACES WITH A SINGLE BLANK\t*\n");
+        printf("*************************************************************************");
+
+
+        printf("\nEnter a Sentence\n");
+        gets(acSStr);
+
+        /*REPLACE TABS WITH SPACES*/
+        j=0;
+        for(i = 0; acSStr[i] != '\0'; i++)
+        {        
+                cCurChar = acSStr[i];
+                if( cCurChar == '\t' )
+                {
+                        cCurChar = ' ';
+                }
+                acDStr1[j++] = cCurChar;
+        }
+        /*PLACE A NULL TERMINATOR AT END OF STRING*/
+        acDStr1[j] = '\0';
+
+        /*REPLACE MULTIPLE SPACES WITH SINGLE SPACE*/
+        j=0;
+        for(i = 0; acDStr1[i] != '\0'; i++)
+        {
+                cCurChar = acDStr1[i];
+                if( cCurChar == ' ' )
+                {
+                        iSpcount++;
+                        if( iSpcount == 1)
+                        acDStr2[j++] = cCurChar;        
+                }
+                else
+                {                
+                        iSpcount = 0;
+                        acDStr2[j++] = cCurChar;
+                }
+
+        }
+        /*PLACE A NULL TERMINATOR AT END OF STRING*/
+        acDStr2[j] = '\0';
+
+        printf("\nThe Original String is\n");
+        puts(acSStr);
+
+        printf("\nThe String without spaces is\n");
+        puts(acDStr2);
+        return 0;
+}
+## Output:
+*Commands for execution:-*
+
+* Open terminal for compilation .
+* Change directory to the file location in the terminal.
+* compilation command:Run gcc *filename.c* in terminal.
+* for display output:If no errors, run ./a.out
+
+
+1. u__b__u______n_________t_______u
+   new string is u_b_u_n_t_u
+
+*Screenshots:-*
+
+![ScreenShot of Output](9.png)
